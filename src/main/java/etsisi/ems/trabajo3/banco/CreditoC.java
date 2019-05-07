@@ -23,8 +23,7 @@ public class CreditoC{
 		Movimientos = new Vector<Movimiento>();
 		MarcaInternacional = marcainternacional;
 		NombreEntidad = nombreentidad;
-		CCV = ccv;
-	}
+		CCV = ccv;}
 
 public double calcularCredito(int tipo) {
 	double credito;

@@ -47,15 +47,15 @@ public class Cuenta {
 		m.setConcepto(concepto);
 		return m;
 	}
-	public void ComprobarN (double x,Movimiento m, boolean retOIng) {
-		if (retOIng)	m.setImporte(-x);
-		else	m.setImporte(x);
-	}
+	
+	
 	public void modificarDinero(double x, String concepto, boolean retOIng){
 		Movimiento m = CrearMovimiento(concepto);
-		ComprobarN (x,m,retOIng);
-		efectuarMovimiento(m);
-	}
+		if (retOIng)	m.setImporte(-x);
+		else	m.setImporte(x);
+		efectuarMovimiento(m);}
+	
+	
 	public void efectuarMovimiento(Movimiento m){
 		Date date = new Date();
 		LocalDate fecha = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
