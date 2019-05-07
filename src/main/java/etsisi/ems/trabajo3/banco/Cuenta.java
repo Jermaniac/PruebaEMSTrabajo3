@@ -48,12 +48,8 @@ public class Cuenta {
 		return m;
 	}
 	public void ComprobarN (double x,Movimiento m, boolean retOIng) {
-		if (retOIng){
-			m.setImporte(-x);
-		}
-		else{
-			m.setImporte(x);
-		}
+		if (retOIng)	m.setImporte(-x);
+		else	m.setImporte(x);
 	}
 	public void modificarDinero(double x, String concepto, boolean retOIng){
 		Movimiento m = CrearMovimiento(concepto);
