@@ -5,7 +5,7 @@ import java.util.Vector;
 import java.time.LocalDate;
 import java.time.ZoneId;
 
-public class Credito{
+public class Credito {
 	public Cuenta mCuentaAsociada;
 	protected double mCredito;
 	protected Vector<Movimiento> mMovimientos;
@@ -16,7 +16,7 @@ public class Credito{
 	public int mMarcaInternacional; //mastercard, maestro, visa ...
 	public int mTipo; //oro platino clásica
 
-	public Credito(String numero, String titular, LocalDate fechacaducidad, int marcainternacional,	String nombreentidad, int ccv) {
+	public Credito(String numero, String titular, LocalDate fechacaducidad,double credito, int marcainternacional,	String nombreentidad, int ccv) {
 		mNumero = numero;
 		mTitular = titular;
 		mFechaDeCaducidad = fechacaducidad;
@@ -24,8 +24,8 @@ public class Credito{
 		mMarcaInternacional = marcainternacional;
 		mNombreEntidad = nombreentidad;
 		mCCV = ccv;
+		mCredito = credito;
 	}
-
 
 
 public double calcularCredito(int tipo) {
