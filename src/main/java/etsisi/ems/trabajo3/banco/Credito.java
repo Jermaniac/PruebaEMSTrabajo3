@@ -7,8 +7,8 @@ import java.time.ZoneId;
 
 public class Credito extends CreditoC{
 
-	public Credito(String numero, String titular, LocalDate fechacaducidad, double credito2, int marcainternacional, String nombreentidad, int ccv) {
-		super(numero, titular, fechacaducidad,marcainternacional, nombreentidad, ccv);
+	public Credito(CreditoC parametros, double credito2) {
+		super(parametros.Numero, parametros.Titular, parametros.FechaDeCaducidad, parametros.MarcaInternacional, parametros.NombreEntidad, parametros.CCV);
 		credito=credito2;
 	}
 	public Credito(CreditoC parametros) {
