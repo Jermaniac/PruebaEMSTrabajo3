@@ -20,11 +20,16 @@ public class CreditoC{
 		Numero = numero;
 		Titular = titular;
 		FechaDeCaducidad = fechacaducidad;
+		setDemas(marcainternacional,nombreentidad,ccv);
+		}
+	public void setDemas(int marcainternacional, String nombreentidad, int ccv) {
 		Movimientos = new Vector<Movimiento>();
 		MarcaInternacional = marcainternacional;
 		NombreEntidad = nombreentidad;
-		CCV = ccv;}
-
+		CCV = ccv;
+	}
+	
+	
 public double calcularCredito(int tipo) {
 	double credito;
 	switch (tipo) {

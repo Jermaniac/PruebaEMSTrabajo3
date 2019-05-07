@@ -1,6 +1,7 @@
 package etsisi.ems.trabajo3.banco;
 
 import java.time.LocalDate;
+import java.util.Vector;
 
 public class Debito  {
 	public Cuenta mCuentaAsociada;
@@ -33,3 +34,5 @@ public class Debito  {
 		return mCuentaAsociada.getSaldo();
 	}
 }
+
+
